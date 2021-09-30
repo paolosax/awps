@@ -1,0 +1,41 @@
+/*--------------------------------------------------------------
+# COMPONENTS/WORKS (SWIPER)
+--------------------------------------------------------------*/
+
+.gg-works {
+
+    &__pagination {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        position: absolute;
+        // bottom: $global-margin*3;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        height: 50px;
+        // @include gradient(rgba($black, 0), rgba(black, .75), vertical);
+
+        .swiper-pagination-bullet {
+            cursor: pointer;
+            width: 8px;
+            height: 8px;
+            margin: $global-margin/2 $global-margin;
+            border: 0.1rem solid #d7d7d7;
+            background: transparent;
+            border-radius: 30px;
+            @include transition(all .3s ease);
+
+            &-active,
+            &:hover {
+                border-color: $primary-color;
+                background: $primary-color;
+            }
+
+            &-active {
+                width: 18px;
+            }
+        }
+    }
+}

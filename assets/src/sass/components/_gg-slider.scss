@@ -1,0 +1,272 @@
+/*--------------------------------------------------------------
+# COMPONENTS/SWIPER SLIDER
+--------------------------------------------------------------*/
+@keyframes dots {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.gg-slider {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  /* &.swiper-container {
+  position: relative;
+} */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    z-index: 9;
+
+    @include gradient(rgba(black, .9), rgba($black, 0), vertical);
+  }
+
+  &__slide {
+    >img {
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      object-fit: cover;
+      object-position: 50% 100%
+    }
+
+    &-preloader {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      // background: linear-gradient(150deg, rgba(200, 255, 255, .6), gba(255, 200, 255, .3));
+      background-color: red !important;
+
+      p {
+        font-size: 1em;
+
+        span:nth-child(1) {
+          animation: dots 1s infinite;
+        }
+
+        span:nth-child(2) {
+          animation: dots 2s infinite;
+        }
+
+        span:nth-child(3) {
+          animation: dots 3s infinite;
+        }
+      }
+    }
+
+  }
+
+  &__caption {
+    z-index: 10;
+    position: absolute;
+    // width: $global-width;
+    @include make-container(); // bs
+    @include make-container-max-widths(); // bs
+    height: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto !important;
+    color: white;
+
+    .content {
+      >* {
+        text-shadow: 1px 1px 0px $black;
+      }
+    }
+  }
+
+  &__pagination {
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    position: absolute;
+    // bottom: $global-margin*3;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: 50px;
+    // @include gradient(rgba($black, 0), rgba(black, .75), vertical);
+
+    .swiper-pagination-bullet {
+      cursor: pointer;
+      width: 8px;
+      height: 8px;
+      margin: $global-margin/2 $global-margin;
+      border: 0.1rem solid $primary-color;
+      background: transparent;
+      border-radius: 30px;
+      @include transition(all .3s ease);
+
+      &-active,
+      &:hover {
+        border-color: $primary-color;
+        background: $primary-color;
+      }
+
+      &-active {
+        width: 18px;
+      }
+    }
+  }
+
+  &__button-prev,
+  &__button-next {
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    width: 6rem;
+    height: 6rem;
+    padding: 0;
+    margin: 0;
+    margin-top: -21px;
+    color: #cccccc;
+    font-size: 30px;
+    line-height: 1;
+    border: none;
+    background-color: rgba($white, .5);
+    cursor: pointer;
+    @include border-radius(50px);
+    @include box-shadow(0px, 5px, 20px, 0, rgba($black, .5), false);
+    @include transition(all 0.3s ease);
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+    }
+
+    &::after {
+      font-size: 2rem;
+    }
+  }
+
+  &__button-prev {
+    left: .5rem;
+
+    /* @include breakpoint(xlarge) {
+      left: -7rem;
+    } */
+  }
+
+  &__button-next {
+    right: .5rem;
+
+    /* @include breakpoint(xlarge) {
+      right: -7rem;
+    } */
+  }
+}
+
+.swiper-container {
+  height: 100vh;
+  width: 100%;
+  // width: 600px;
+  // height: 300px;
+
+  .swiper-button {
+
+    &-prev,
+    &-next {
+      z-index: 9999
+    }
+  }
+}
+
+//  swiper 02
+.swiper-slider-02 {
+  &.swiper-container {
+    height: 100vh;
+  }
+
+  .swiper-slide {
+    overflow: hidden;
+  }
+
+  .slide-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .copy {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.06em;
+  }
+
+  a {
+    color: white;
+  }
+
+}
+
+/* 
+
+.owl-theme .owl-nav [class*='owl-'] {
+    color: #c96; }
+    .owl-theme .owl-nav [class*='owl-']:not(.disabled):hover {
+      border-color: #c96;
+      background: #c96; }
+  .owl-theme.owl-light .owl-nav [class*='owl-']:not(.disabled):hover {
+    border-color: #c96; }
+  .owl-theme.owl-light .owl-dots .owl-dot:hover span {
+    border-color: #c96;
+    background: #c96; }
+  .owl-theme.owl-light .owl-dots .owl-dot.active span {
+    border-color: #c96;
+    background: #c96; }
+  
+  .owl-full .owl-nav [class*='owl-'] {
+    color: #c96; }
+    .owl-full .owl-nav [class*='owl-']:hover, .owl-full .owl-nav [class*='owl-']:focus {
+      color: #c96; }
+  .owl-full .owl-dots .owl-dot span {
+    border-color: #c96; }
+  .owl-full .owl-dots .owl-dot:hover span {
+    border-color: #c96;
+    background: #c96; }
+  .owl-full .owl-dots .owl-dot.active span {
+    border-color: #c96;
+    background: #c96; }
+  .owl-full.owl-nav-dark .owl-nav [class*='owl-']:hover, .owl-full.owl-nav-dark .owl-nav [class*='owl-']:focus {
+    color: #c96; }
+  
+  .owl-simple .owl-nav [class*='owl-']:not(.disabled):hover {
+    color: #c96; }
+  .owl-simple.owl-light .owl-dots .owl-dot:hover span {
+    border-color: #c96;
+    background: #c96; }
+  .owl-simple.owl-light .owl-dots .owl-dot.active span {
+    border-color: #c96;
+    background: #c96; }
+*/

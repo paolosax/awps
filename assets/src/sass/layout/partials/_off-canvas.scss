@@ -1,0 +1,24 @@
+/*--------------------------------------------------------------
+# LAYOUT/PARTIALS/OFF-CANVAS
+--------------------------------------------------------------*/
+$off-canvas-pane-width: 300px;
+$translate-right: calc(100vw - $off-canvas-pane-width);
+
+.off-canvas {
+    @include flexbox();
+    @include flex-direction(column);
+    position: absolute;
+    top: 0;
+    width: $off-canvas-pane-width;
+    min-height: 100vh;
+    background-color: #ccc;
+    padding: $global-padding;
+    z-index: 999999;
+    @include transition(all .3s linear);
+
+    &--right {
+        @include translate3d($off-canvas-pane-width, 0px, 0px);
+    }
+}
+
+/*  */

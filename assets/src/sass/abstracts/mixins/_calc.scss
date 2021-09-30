@@ -1,0 +1,12 @@
+/*--------------------------------------------------------------
+# MIXINS - CALC
+ref.: https://coderwall.com/p/qac-og/sass-css3-calc-mixin
+usage: 
+    @include calc( width, '100% - 2px')
+--------------------------------------------------------------*/
+
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}

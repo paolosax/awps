@@ -1,0 +1,85 @@
+/*--------------------------------------------------------------
+# COMPONENTS/MOSAIC
+https://codepen.io/brianhaferkamp/pen/KGjxmw
+--------------------------------------------------------------*/
+
+.gg-grid {
+    @extend %grid-wrapper;
+
+    &__item {
+        @extend %grid-item;
+        @include flexbox();
+        @include align-items(flex-end);
+        @include justify-content(center);
+        @include transition(all .4s ease);
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            // width: 100%;
+            // height: 100%;
+            background-color: rgba($black, .0);
+            z-index: 1;
+            @include transition(all .4s ease);
+        }
+
+        &:hover {
+            &::after {
+                background: rgba($black, .4);
+            }
+
+            img {
+                @include scale(1.1);
+            }
+
+            .gg-grid__item-content {
+                background-color: rgba($black, 0);
+                // border-top: 1px solid rgba($white, .25);
+                // transform: translateY(-100%);
+                // transition: transform var(--interval) ease;
+                // transition-delay: .800s;
+
+                &-title {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        >img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            @include scale(1);
+            @include transition(all .5s ease-in-out);
+        }
+
+        &-content {
+            @include flexbox();
+            @include flex-direction(column);
+            @include align-items(center);
+            @include justify-content(center);
+            @include border-radius(.2rem);
+            @include transition(all .4s ease);
+            width: 100%;
+            position: absolute;
+            z-index: 10;
+            padding: $global-padding*2;
+            background-color: rgba($black, .4);
+
+            &-title {
+                margin-bottom: 0;
+                color: $white;
+                text-shadow: 1px 1px 0px $black;
+            }
+
+            &-subtitle {}
+        }
+    }
+}

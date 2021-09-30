@@ -1,0 +1,15 @@
+/*--------------------------------------------------------------
+# ABSTRACTS/FUNCTIONS
+--------------------------------------------------------------*/
+
+/**
+* HEADER
+*/
+@function header_height($device) {
+    @if map-has-key($header_height, $device) {
+        @return map-get($header_height, $device);
+    }
+
+    @warn "The key #{$device} is not in the map ’$header_height";
+    @return null;
+}

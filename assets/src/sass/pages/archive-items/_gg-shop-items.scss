@@ -1,0 +1,135 @@
+/*--------------------------------------------------------------
+# PAGES / ARCHIVE ITEMS / SHOPY-ITEMS
+--------------------------------------------------------------*/
+.product.product-list {
+    box-shadow: none;
+    padding-bottom: 2rem;
+    border-bottom: .1rem solid #ebebeb;
+    margin-bottom: 2rem;
+
+    .product-media {
+        height: 100%;
+
+        >a {
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .product-body {
+        padding: 1.6rem 0 0;
+
+        .btn-wishlist {
+            top: 3.1rem
+        }
+    }
+
+    .product-list-action {
+        padding: 3.4rem 0 0;
+    }
+
+    .product-content {
+        color: #777;
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 1.43;
+        padding-top: 1rem;
+        margin-bottom: 3.4rem;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .product-action {
+        position: static;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        margin-bottom: 1.2rem;
+    }
+
+    .ratings-container {
+        margin-bottom: 2.6rem;
+    }
+
+    .btn-product {
+        color: #777;
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 1.4;
+        flex: 1 1 50%;
+        max-width: 50%;
+
+        &:before {
+            margin-right: .5rem;
+        }
+
+        span {
+            color: inherit;
+            font-size: 1.2rem;
+            transition: box-shadow .35s ease, color 0s ease;
+        }
+
+        &.disabled {
+            pointer-events: none;
+        }
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+
+            span {
+                color: inherit;
+            }
+        }
+
+        &.btn-cart {
+            color: $primary-color;
+            border: .1rem solid $primary-color;
+            flex: 1 1 100%;
+            max-width: 100%;
+            text-transform: uppercase;
+            line-height: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            transition: all .35s ease;
+
+            span {
+                font-size: 1.3rem;
+            }
+
+            &:hover,
+            &:focus {
+                color: #fff;
+                background-color: $primary-color;
+
+                span {
+                    box-shadow: none;
+                }
+            }
+
+            &.disabled {
+                color: #ccc;
+                border-color: #ebebeb;
+                background-color: #fafafa;
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .product-nav {
+        margin-bottom: 0;
+    }
+}

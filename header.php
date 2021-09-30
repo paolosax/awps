@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header for our theme
  *
@@ -9,74 +10,54 @@
  * @package awps
  */
 
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+?>
+<!DOCTYPE html>
+<html class="no-js" <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<?php if (is_singular() && pings_open(get_queried_object())) : ?>
+		<link rel="pingback" href="<?php echo esc_url(get_bloginfo('pingback_url')); ?>">
+	<?php endif; ?>
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-	<div id="page" class="site" <?php echo ! is_customize_preview() ?: 'style="padding: 0 40px;"'; ?>>
+	<?php wp_body_open(); ?>
+	<div id="page" <?php page_classes('page-wrapper'); ?>>
+		<?php
+		/**
+		 * Hook: goldengames_hook_before_header.
+		 *
+		 * @hooked Skip to content - 5 (outputs the 'skip-to-content' link)
+		 * @hooked dynamic_sidebar('before-header-sidebar') - 10 (outputs the before-header widget area)
+		 */
+		do_action('goldengames_hook_before_header');
 
-		<header id="masthead" class="site-header" role="banner">
+		/**
+		 * Get the template part for displaying the site-header
+		 */
+		get_template_part('views/partials/site-header/site-header');
 
+		/**
+		 * Hook: goldengames_hook_after_header.
+		 *
+		 * @hooked dynamic_sidebar('after-header-sidebar') - 10 (outputs the after-header widget area)
+		 * @hooked get_template_part: template-parts/components/common/titlebar - 30 (outputs the title-bar partial)
+		 */
+		do_action('goldengames_hook_after_header');
+		?>
+
+		<!-- <div class="content-wrapper {{#unlesspage 'index'}}container{{/unlesspage}}"> -->
+		<div id="content-wrapper" <?php content_wrapper_classes('content-wrapper'); ?>>
 			<?php
-			if ( is_customize_preview() ) {
-				echo '<div id="awps-header-control"></div>';
-			}
+			/**
+			 * Hook: goldengames_hook_content_start.
+			 *
+			 */
+			do_action('goldengames_hook_content_start');
 			?>
-
-			<div class="container container-fluid">
-
-				<div class="row">
-					<div class="col-xs-12 col-sm-4">
-
-						<div class="site-branding">
-							<h1 class="site-title">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-									<?php svg( 'wordpress' ); ?>
-									<?php bloginfo( 'name' ); ?>
-								</a>
-							</h1>
-							<?php
-							$description = get_bloginfo( 'description', 'display' );
-							if ( $description || is_customize_preview() ) :
-							?>
-								<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-							<?php
-							endif;
-							?>
-					</div><!-- .site-branding -->
-
-				</div><!-- .col -->
-
-				<div class="col-xs-12 col-sm-8">
-
-					<nav id="site-navigation" class="main-navigation" role="navigation">
-						<?php
-						if ( has_nav_menu( 'primary' ) ) :
-							wp_nav_menu(
-								array(
-									'theme_location' => 'primary',
-									'menu_id'        => 'primary-menu',
-									'walker'         => new Awps\Core\WalkerNav(),
-								)
-							);
-						endif;
-						?>
-					</nav>
-
-				</div><!-- .col -->
-
-			</div><!-- .row -->
-		</div><!-- .container-fluid -->
-
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">

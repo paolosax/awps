@@ -1,0 +1,105 @@
+/*--------------------------------------------------------------
+# COMPONENTS/GG-CAROUSELS
+--------------------------------------------------------------*/
+.gg-carousel {
+
+    position: relative;
+    overflow: visible;
+
+    &__item {
+        margin-bottom: 0;
+        height: unset;
+    }
+
+    // prev/next
+    &__button-prev,
+    &__button-next {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        position: absolute;
+        top: 50%;
+        z-index: 99;
+        width: 6rem;
+        height: 6rem;
+        padding: 0;
+        margin: 0;
+        margin-top: -21px;
+        color: #cccccc;
+        font-size: 30px;
+        line-height: 1;
+        border: none;
+        background-color: rgba($white, .5);
+        cursor: pointer;
+        @include border-radius(50px);
+        @include box-shadow(0px, 5px, 20px, 0, rgba($black, .5), false);
+        @include transition(all 0.3s ease);
+
+        &:hover {
+            background-color: $primary-color;
+            color: $white;
+        }
+    }
+
+    &__button-prev {
+        left: .5rem;
+
+        @include breakpoint(xlarge) {
+            left: -7rem;
+        }
+    }
+
+    &__button-next {
+        right: .5rem;
+
+        @include breakpoint(xlarge) {
+            right: -7rem;
+        }
+    }
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+
+        &__button-prev,
+        &__button-next {
+            -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+            background-color: rgba($primary-color, 0.75);
+        }
+    }
+
+    // pagination
+    .swiper-pagination {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        position: relative;
+        // bottom: $global-margin*3;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        height: 50px;
+        // @include gradient(rgba($black, 0), rgba(black, .75), vertical);
+
+        .swiper-pagination-bullet {
+            cursor: pointer;
+            width: 8px;
+            height: 8px;
+            margin: $global-margin/2 $global-margin;
+            border: 0.1rem solid $primary-color;
+            background-color: $primary-color;
+            border-radius: 30px;
+            @include transition(all .3s ease);
+
+            &-active,
+            &:hover {
+                border-color: $primary-color;
+                background: $primary-color;
+            }
+
+            &-active {
+                width: 18px;
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+/*--------------------------------------------------------------
+# ABSTRACTS/MIXINS/CLIPPED-CORNER
+https://gist.github.com/misfist/0c48d31aa7b26df8270fe8e044249953
+--------------------------------------------------------------*/
+
+@mixin clipped-corner($corner: bottom-right, $height: 58px, $width: 52px) {
+
+    @if $corner==top-left {
+        clip-path: polygon(0 #{$height}, #{$width} 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    @else if $corner==top-right {
+        clip-path: polygon(0 100%, 0 0, calc(100% - #{$width}) 0, 100% #{$height}, 100% 100%);
+    }
+
+    @else if $corner==bottom-right {
+        clip-path: polygon(100% calc(100% - #{$height}),
+            /*right bottom 100% - height px*/
+            calc(100% - #{$width}) 100%,
+            /* right bottom - 100% - width px */
+            0 100%,
+            /*left bottom*/
+            0 0,
+            /*left top*/
+            100% 0
+            /*right top*/
+        );
+    }
+
+    @else if $corner==bottom-left {
+        clip-path: polygon(0 calc(100% - #{$height}), 0 0, 100% 0, 100% 100%, #{$width} 100%);
+    }
+
+    @else {
+        clip-path: polygon(0 0, calc(100% - #{$width}) 0, 100% #{height}, 100% 100%, 0 100%);
+    }
+
+}
+
+$corner:('b-r': 'bottom-right',
+    'b-l': 'bottom-left',
+    't-r': 'top-right',
+    't-l': 'top-left',
+);
+$height: (
+    '40': 40px,
+    '45': 45px,
+    '50': 50px,
+    '55': 55px,
+    '60': 60px,
+    '65': 65px,
+    '70': 70px,
+    '75': 75px,
+    '80': 80px,
+);
+$width: (
+    '40': 40px,
+    '45': 45px,
+    '50': 50px,
+    '55': 55px,
+    '60': 60px,
+    '65': 65px,
+    '70': 70px,
+    '75': 75px,
+    '80': 80px,
+);
+.clipped-corner {
+
+    @each $ckey, $cvalue in $corner {
+        &--#{$ckey} {
+            @each $hkey, $hvalue in $height {
+                &-h#{$hkey} {
+                    @each $wkey, $wvalue in $width {
+                        &-w#{$wkey} {
+                            @include clipped-corner($corner: #{$cvalue}, $height: #{$hvalue}, $width: #{$wvalue})
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+/*--------------------------------------------------------------
+# PAGES / CONTACT
+--------------------------------------------------------------*/
+
+.gg-contact {
+    &__form {
+        &-submit {
+            text-transform: uppercase;
+            color: get_color(gg-blue);
+            background-color: transparent;
+            background-image: none;
+            border-color: get_color(gg-blue);
+
+            &:hover {
+                color: #fff;
+                background-color: get_color(gg-blue);
+                border-color: get_color(gg-blue);
+            }
+        }
+    }
+}

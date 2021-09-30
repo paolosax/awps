@@ -1,0 +1,58 @@
+/*--------------------------------------------------------------
+# MIXINS - THEMIFY
+ref.: https://medium.com/@dmitriy.borodiy/easy-color-theming-with-scss-bc38fd5734d1
+ref.: https://gist.github.com/dmitru/39245f9e702dad9b04d504c549fc1814
+USAGE:
+  html:
+  <body class="theme-dark">
+    [...]
+  styles:
+    @include navify($navs) {
+        color: themed('textColor');  
+        background-color: themed('backgroundColor');  
+      }
+--------------------------------------------------------------*/
+
+@import '../layouts';
+
+@mixin navify($navs: $navs) {
+  @each $nav, $map in $navs {
+
+    .nav-#{$nav} & {
+      $nav-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($navs, $nav), '#{$key}');
+        $nav-map: map-merge($nav-map, ($key: $value)) !global;
+      }
+
+      @content;
+      $nav-map: null !global;
+    }
+
+  }
+}
+
+@function navified($key) {
+  @return map-get($nav-map, $key);
+}
+
+@mixin navify2($navs: $navs2) {
+  @each $nav, $map in $navs {
+
+    .nav-#{$nav} & {
+      $nav-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($navs, $nav), '#{$key}');
+        $nav-map: map-merge($nav-map, ($key: $value)) !global;
+      }
+
+      @content;
+      $nav-map: null !global;
+    }
+
+  }
+}
+
+@function navified2($key) {
+  @return map-get($nav-map, $key);
+}

@@ -1,0 +1,72 @@
+/*--------------------------------------------------------------
+# ABSTRACT - VARIABLES
+--------------------------------------------------------------*/
+
+/**
+* Topbar
+height: map-get($topbar_height, small);
+*/
+$topbar_height: (small: 40px,
+  medium: 40px,
+  large: 40px, // MD: 128
+  xlarge: 40px,
+  xxlarge: 40px,
+);
+$topbarHeight_s: map-get($topbar_height, small);
+$topbarHeight_m: map-get($topbar_height, medium);
+$topbarHeight_l: map-get($topbar_height, large);
+$topbarHeight_xl: map-get($topbar_height, xlarge);
+$topbarHeight_xxl: map-get($topbar_height, xxlarge);
+
+// generic transform
+@mixin height($height, $mq) {
+  @include breakpoint($mq) {
+    height: $height;
+  }
+}
+
+@mixin min_height($height, $mq) {
+  @include breakpoint($mq) {
+    min-height: $height;
+  }
+}
+
+
+
+/**
+* Navbar
+*/
+$navbar_height: (small: 56px,
+  medium: 60px,
+  large: 80px, // MD: 128
+  xlarge: 90px,
+  xxlarge: 90px,
+);
+$navbarHeight_s: map-get($navbar_height, small);
+$navbarHeight_m: map-get($navbar_height, medium);
+$navbarHeight_l: map-get($navbar_height, large);
+$navbarHeight_xl: map-get($navbar_height, xlarge);
+$navbarHeight_xxl: map-get($navbar_height, xxlarge);
+
+$headerH_s: calc(#{map-get($topbar_height, small)} + #{map-get($navbar_height, small)});
+$headerH_m: calc(#{map-get($topbar_height, medium)} + #{map-get($navbar_height, medium)});
+$headerH_l: calc(#{map-get($topbar_height, large)} + #{map-get($navbar_height, large)});
+$headerH_xl: calc(#{map-get($topbar_height, xlarge)} + #{map-get($navbar_height, xlarge)});
+$headerH_xxl: calc(#{map-get($topbar_height, xxlarge)} + #{map-get($navbar_height, xxlarge)});
+
+// FOOTER
+$footer-info-height: (small: 100px,
+  medium: 200px,
+  large: 300px,
+);
+
+/* Colors */
+// $primary-color: #ec7247;
+// $secondary-color: #f39;
+$page-title-bg: #f4f4f2;
+
+$index-service-item-bg: #e6e6e6;
+$index-service-item-btn-bg: #d6d6d6;
+
+// SLICK
+$arrow-button-width: 3.25rem;

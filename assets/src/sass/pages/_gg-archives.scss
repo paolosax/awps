@@ -1,0 +1,15 @@
+/*--------------------------------------------------------------
+# PAGES / ARCHIVES
+--------------------------------------------------------------*/
+
+.gg-archive {
+    @extend %grid-wrapper;
+
+    @include breakpoint(xsmall) {
+        grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    }
+
+    &__item {
+        @extend %grid-item;
+    }
+}

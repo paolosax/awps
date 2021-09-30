@@ -1,0 +1,48 @@
+/*--------------------------------------------------------------
+# ABSTRACTS/THEMES (ref.: Themify)
+--------------------------------------------------------------*/
+$themes: (
+  default: (
+    bgColor: $white,
+    lightBg: #f0f0f0,
+    textColor: $black,
+    anchorColor: $primary-color,
+    anchorHoverColor: $secondary-color,
+    btnTextColor: $white,
+    btnTextTransform: none,
+    btnTextHoverColor: $white,
+    btnBgColor: $primary-color,
+    btnBgHoverColor: $secondary-color,
+    btnBorder: 1px solid $primary-color,
+    btnBorderHover: 1px solid $secondary-color,
+  ),
+  blossom: (
+    bgColor: #fafafa,
+    lightBg: #f0f0f0,
+    textColor: #202020,
+    anchorColor: #fc5185,
+    anchorHoverColor: #c7236f,
+    btnTextColor: #f0f0f0,
+    btnTextTransform: uppercase,
+    btnTextHoverColor: #a8a8a8,
+    btnBgColor: #fc5185,
+    btnBgHoverColor: #c7236f,
+    btnBorder: 1px solid #364f6b,
+    btnBorderHover: 1px solid #364f6b,
+  )
+);
+
+$skins: (
+  light: (
+    bgColor: $white,
+    textColor: $black,
+    anchorColor: $primary-color,
+    anchorHoverColor: $secondary-color
+  ),
+  dark: (
+    bgColor: $black,
+    textColor: $white,
+    anchorColor: $white,
+    anchorHoverColor: $secondary-color
+  )
+);

@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------
+# ABSTRACTS/UTILITIES/BORDERS
+--------------------------------------------------------------*/
+
+$sides: (top, bottom, left, right);
+
+.border {
+  border: 1px solid $light-gray !important;
+}
+
+.border-0 {
+  border: 0 !important;
+}
+
+@each $side in $sides {
+  .border-#{nth($side, 1)} {
+  border-#{nth($side, 1)}: 1px solid $light-gray !important;
+}
+
+  .border-#{nth($side, 1)}-0 {
+    border-#{nth($side, 1)}: 0 !important;
+  }
+}
+
+@each $name, $hex in $foundation-palette {
+  .border-#{$name} {
+    border-color: $hex !important;
+  }
+}

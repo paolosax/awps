@@ -1,0 +1,115 @@
+/*--------------------------------------------------------------
+# COMPONENTS/FEATURES
+--------------------------------------------------------------*/
+
+.feature {
+    &.alt-order {}
+
+    &__wrapper {
+        min-height: 50vh;
+
+        &--bg {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-image:
+                linear-gradient(105deg,
+                    rgba($white, .7) 0%,
+                    rgba($white, .7) 50%,
+                    transparent 50%),
+                url('https://picsum.photos/id/203/1024/768');
+            background-size: 100%;
+
+            .feature__content {
+                background-color: transparent;
+            }
+        }
+    }
+
+    &.alternate-order {
+        .feature__wrapper {
+            &:nth-child(odd) {
+                @include flex-direction(row);
+            }
+
+            &:nth-child(even) {
+                @include flex-direction(row-reverse)
+            }
+        }
+    }
+
+    &__content {
+        padding: $global-padding*2 !important;
+        background-color: $white;
+
+        @include breakpoint(large) {
+            padding: $global-padding*6 !important;
+        }
+    }
+
+    &__image,
+    &__video {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        position: relative;
+        min-height: 250px;
+        padding: $global-padding*2 !important;
+
+        @include breakpoint(large) {
+            padding: $global-padding*6 !important;
+        }
+
+        &-text {
+            border: 1px solid rgba($white, .07);
+            padding: $global-padding*2;
+            text-transform: uppercase;
+            color: $white;
+            z-index: 2;
+
+            h2 {
+                color: $primary-color;
+
+                @include breakpoint(large) {
+                    font-size: 4rem;
+                }
+
+                span {
+                    font-family: 'Raleway', Helvetica, 'Roboto', Arial, sans-serif;
+                    display: block;
+                    font-weight: normal;
+                    font-size: 1rem;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &__image {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    &__video {
+        &-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+
+            video {
+                min-width: 100%;
+                min-height: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                object-fit: cover;
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+// https://codepen.io/pmarich/pen/JLWJZL
+.play-icon {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(35, 75, 134, 0.8);
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 101;
+
+    &:hover {
+        animation: grow 0.2s ease-in-out 1 forwards;
+    }
+
+    @include breakpoint(medium) {
+        display: none;
+    }
+}
+
+.triangle {
+    width: 30px;
+    height: 30px;
+    @include translate(23px, 21px);
+}
+
+@-webkit-keyframes grow {
+    from {
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4);
+    }
+
+    to {
+        box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.6);
+    }
+}
+
+@keyframes grow {
+    from {
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4);
+    }
+
+    to {
+        box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.6);
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

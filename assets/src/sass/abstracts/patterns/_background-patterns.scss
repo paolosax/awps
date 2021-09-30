@@ -1,0 +1,69 @@
+/*--------------------------------------------------------------
+# ABSTRACTS/PATTERNS/BACKGROUND PATTERNS
+--------------------------------------------------------------*/
+
+.circle-patterns {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    width: 100%;
+    position: absolute;
+    top: -100%;
+    left: -40%;
+    @include rotate(45);
+    // opacity: .5;
+
+    @include breakpoint(375px) {
+        // top: -130%;
+        left: -60%;
+    }
+
+    @include breakpoint(xsmall) {
+        top: -130%;
+        left: -100%;
+    }
+
+    @include breakpoint(medium) {
+        top: -170%;
+        // left: -100%;
+    }
+
+    @include breakpoint(large) {
+        @include rotate(-45);
+        top: 0;
+        left: -35%;
+    }
+
+    .item {
+        border-radius: 50%;
+        height: calc(100vw/8);
+        /* Change the size to fit your needs */
+        width: calc(100vw/8);
+        // background-color: $nth;
+
+        @include breakpoint(large) {
+            height: calc(100vw/20);
+            /* Change the size to fit your needs */
+            width: calc(100vw/20);
+        }
+
+        &.red {
+            background-color: $secondary-color;
+
+            &--striped {
+                // background-image: linear-gradient(135deg, $secondary-color 12.50%, 12.50%, 50%, $secondary-color 50%, $secondary-color 62.50%, 62.50%, 100%);
+                // background-size: 5.66px 5.66px;
+                background-image: linear-gradient(135deg, $secondary-color 12.50%, rgba($white, 0) 12.50%, rgba($white, 0) 50%, $secondary-color 50%, $secondary-color 62.50%, rgba($white, 0) 62.50%, rgba($white, 0) 100%);
+                background-size: 5.66px 5.66px;
+            }
+        }
+
+        &.yellow {
+            background-color: $primary-color;
+
+            &--striped {
+                background-image: linear-gradient(135deg, $primary-color 12.50%, rgba($white, 0) 12.50%, rgba($white, 0) 50%, $primary-color 50%, $primary-color 62.50%, rgba($white, 0) 62.50%, rgba($white, 0) 100%);
+                background-size: 5.66px 5.66px;
+            }
+        }
+    }
+}

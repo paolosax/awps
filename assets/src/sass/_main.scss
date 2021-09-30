@@ -1,0 +1,91 @@
+/*--------------------------------------------------------------
+# IMPORT SASS FILES
+--------------------------------------------------------------*/
+/*
+1. ABSTRACT
+2. VENDOR
+3. THEMES
+4. GLOBAL
+5. LAYOUTS
+6. PAGES
+7. COMPONENTS
+
+A. TEMPLATE (per Mokeup)
+*/
+
+/* 1. TEMPLATE */
+// @import 'template/mixins/clearfix';
+// @import 'template/mixins/breakpoints';
+// @import 'template/mixins/lazy';
+// @import 'template/mixins/buttons';
+// @import 'template/config/fonts';
+// @import 'template/config/variables';
+
+/* 1. ABSTRACT */
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+@import 'abstracts/props';
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
+
+/* 1. ABSTRACT/UTILITIES */
+// @import 'abstracts/utilities/spacing';
+// @import 'abstracts/utilities/borders';
+// @import 'abstracts/utilities/alignments';
+@import 'abstracts/utilities/overlays';
+@import 'abstracts/utilities/social-media-colors';
+// @import 'abstracts/utilities/blur';
+// @import 'abstracts/utilities/transparency';
+// @import 'abstracts/utilities/grid-classes';
+
+/* 1. ABSTRACT/PATTERNS */
+@import 'abstracts/patterns/grid-as-many-as-fit';
+@import 'abstracts/patterns/background-patterns';
+
+// Template import
+@import 'template/template';
+
+/* 2. VENDOR */
+// @import 'vendors/init';
+
+/* 4. GLOBAL */
+@import 'global/accessibility';
+@import 'global/common';
+@import 'global/typography';
+@import 'global/forms';
+@import 'global/loader';
+
+/* 5. LAYOUT */
+@import 'layout/base';
+@import 'layout/pages';
+@import 'layout/partials/banners';
+@import 'layout/partials/headers/gg-header';
+@import 'layout/partials/headers/gg-menu';
+@import 'layout/partials/headers/gg-navigation';
+@import 'layout/partials/footers/gg-footer';
+
+/* 7. PAGES */
+@import 'pages/pages';
+@import 'pages/gg-products';
+@import 'pages/gg-archives';
+@import 'pages/archive-items/gg-shop-items';
+@import 'pages/archive-items/gg-category-items';
+@import 'pages/gg-contact';
+
+/* 7. COMPONENTS */
+@import 'components/gg-icons';
+@import 'components/gg-slider';
+@import 'components/gg-offers';
+@import 'components/gg-carousels';
+@import 'components/gg-hero';
+@import 'components/gg-youtube-video-hero';
+@import 'components/gg-embedded-video-hero';
+@import 'components/gg-works';
+@import 'components/gg-icon-cards';
+@import 'components/gg-mosaic';
+@import 'components/gg-grid';
+@import 'components/gg-newsletter';
+@import 'components/gg-certifiers';
+@import 'components/gg-widgets';
+@import 'components/gg-banner';
+@import 'components/gg-google-maps';

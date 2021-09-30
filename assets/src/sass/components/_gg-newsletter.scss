@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------
+# COMPONENTS/NEWSLETTER SUBSCRIBE
+--------------------------------------------------------------*/
+
+.gg-newsletter {
+    padding-top: 3.5rem;
+
+    &__wrapper {}
+    .social-icons {
+        border-bottom: 1px solid $light-gray;
+    }
+
+    &__form {
+
+        input {
+            flex: 1 1 auto;
+            font-size: 1.3rem;
+            font-weight: 300;
+            letter-spacing: 0;
+            color: #999;
+            padding: .6rem .5rem;
+            border: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

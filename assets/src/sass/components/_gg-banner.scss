@@ -1,0 +1,97 @@
+/*--------------------------------------------------------------
+# COMPONENTS/CTA
+--------------------------------------------------------------*/
+
+.gg-banner {
+    position: relative;
+    border-top: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+
+    &__wrapper {
+        @include xy-grid-container;
+        padding: $global-padding*2 $global-padding;
+
+        @include breakpoint(medium) {
+            padding: $global-padding*5 $global-padding*3;
+        }
+
+        @include breakpoint(large) {
+            padding: $global-padding*5 $global-padding*3;
+        }
+
+        @include breakpoint(xlarge) {
+            padding: $global-padding*5 0;
+        }
+
+        .banner {
+            &-content {
+                @include flexbox();
+                @include flex-direction(column);
+                @include align-items(center);
+                @include translate(0, 0);
+                position: relative;
+                top: unset;
+                left: unset;
+                padding-top: unset;
+                text-align: center;
+
+                @include breakpoint(medium) {
+                    // @include align-items(flex-start);
+                    text-align: unset;
+                }
+
+                @include breakpoint(large) {
+                    max-width: 50%;
+                }
+
+                &--full-width {
+                    max-width: unset;
+                }
+            }
+
+            &-title {
+                font-size: 3.2rem;
+                text-align: center;
+
+                @include breakpoint(large) {
+                    font-size: 5rem;
+                    text-align: unset;
+                }
+            }
+
+            &-image-catalogue {
+                position: absolute;
+                height: 150%;
+                bottom: -6rem;
+                left: 0;
+                @include rotate(-15);
+                @include box-shadow(1px, 10px, 10px, 0, rgba($black, .5), false);
+            }
+        }
+    }
+
+    &.has-background {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &--pseudo {
+            overflow: hidden;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 200%;
+                height: 200%;
+                top: -50%;
+                left: -50%;
+                z-index: -1;
+                /* background: url('../img/components/banners/accessories-bg.png') 0 0 repeat;
+background-repeat: no-repeat;
+background-position: right center;
+background-size: contain; */
+                @include rotate(-45);
+            }
+        }
+    }
+}

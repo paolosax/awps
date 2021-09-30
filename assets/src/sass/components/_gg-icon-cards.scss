@@ -1,0 +1,150 @@
+/*--------------------------------------------------------------
+# COMPONENTS/GG-ICON-CARDS
+--------------------------------------------------------------*/
+.gg-icon-cards {
+    padding-top: $global-padding*10;
+    padding-bottom: $global-padding*5;
+
+    &__wrapper {
+        @include breakpoint(xsmall) {
+            @include justify-content(center);
+            @include align-items(stretch);
+        }
+
+        /* >div {
+            &:nth-child(1) {
+                .icon-box-icon {
+                    color: get_color(gg-orange);
+                }
+            }
+
+            &:nth-child(2) {
+                .icon-box-icon {
+                    color: get_color(gg-pale-green);
+                }
+            }
+
+            &:nth-child(3) {
+                .icon-box-icon {
+                    color: get_color(gg-blue-violet);
+                }
+            }
+        } */
+    }
+
+    &__item {
+        margin-bottom: $global-margin;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include breakpoint(xsmall) {
+            margin-bottom: $global-margin*2;
+        }
+
+        &:nth-child(1) {
+            >div {
+                .icon-box-icon {
+                    // color: get_color(gg-orange);
+                    color: #ff8300;
+                }
+
+                &:hover,
+                &:focus {
+                    color: $white;
+                    border-color: get_color(gg-orange);
+                    background-color: get_color(gg-orange);
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            >div {
+                .icon-box-icon {
+                    // color: get_color(gg-pale-green);
+                    // color: #abb91e;
+                    color: $primary-color;
+                }
+
+                &:hover,
+                &:focus {
+                    color: $white;
+                    border-color: get_color(primary);
+                    background-color: get_color(primary);
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            >div {
+                .icon-box-icon {
+                    // color: get_color(gg-blue-violet);
+                    color: #3d33f0;
+                }
+
+                &:hover,
+                &:focus {
+                    color: $white;
+                    border-color: get_color(gg-blue-violet);
+                    background-color: get_color(gg-blue-violet);
+                }
+            }
+        }
+
+        &:nth-child(4) {
+            >div {
+                .icon-box-icon {
+                    // color: get_color(gg-medium-gray);
+                    color: #666666;
+                }
+
+                &:hover,
+                &:focus {
+                    color: $white;
+                    border-color: get_color(gg-medium-gray);
+                    background-color: get_color(gg-medium-gray);
+                }
+            }
+        }
+    }
+
+    .icon-box-card {
+        padding-top: 3rem;
+        padding-bottom: 3.2rem;
+        border: .2rem solid #ebebeb;
+        background-color: transparent;
+        transition: all .3s;
+        margin-bottom: $global-margin;
+        height: 100%;
+
+        .icon-box-icon {
+            font-size: 8rem;
+            // color: $secondary-color;
+        }
+
+        .icon-box-title {
+            font-size: $global-font-size;
+            letter-spacing: .01em;
+            text-transform: uppercase;
+            margin-bottom: .3rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+
+        &:hover,
+        &:focus {
+            // color: $white;
+            // border-color: $secondary-color;
+            // background-color: $secondary-color;
+
+            .icon-box-title,
+            .icon-box-icon,
+            p {
+                color: $white;
+            }
+        }
+    }
+}

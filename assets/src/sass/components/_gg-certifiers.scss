@@ -1,0 +1,24 @@
+/*--------------------------------------------------------------
+# COMPONENTS/GG-CERTIFIERS LOGOS
+--------------------------------------------------------------*/
+
+.certifiers {
+    &__logos {
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+        @include flex-wrap(wrap);
+
+        a {
+            @include flex(1, 0, 50%);
+
+            @include breakpoint(medium) {
+                @include flex(1, 0, calc(100%/3));
+            }
+
+            @include breakpoint(large) {
+                @include flex(1, 0, auto);
+            }
+        }
+    }
+}

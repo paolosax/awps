@@ -1,0 +1,39 @@
+/*--------------------------------------------------------------
+# ABSTRACTS/UTILITIES/GRID CLASSES
+--------------------------------------------------------------*/
+
+@each $breakpoint,
+$value in $breakpoints {
+    @for $i from 1 through $grid-column-count {
+        .col-span-#{$breakpoint}-#{$i} {
+            flex: 1 0 calc((100%/#{$grid-column-count})*#{$i});
+
+            @supports (display: grid) {
+                grid-column-start: 1;
+                grid-column: span $i;
+            }
+        }
+
+        .row-span-#{$breakpoint}-#{$i} {
+            height: calc((100%/#{$grid-column-count})*#{$i});
+
+            @supports (display: grid) {
+                grid-row-start: 1;
+                grid-row: span $i;
+            }
+        }
+    }
+}
+
+/* 
+display: grid;
+  display: -ms-grid;
+  @include grid-columns(1.5em, 1fr 1fr 1fr);
+  @include grid-rows(3em, auto auto);
+  @include grid-autoflow((autoflow: column, columns: 3, rows: 2, gap: both));
+*/
+
+/* 
+colonne: .col-span-small-1
+righe: .row-span-small-1
+*/

@@ -1,0 +1,153 @@
+/*--------------------------------------------------------------
+# COMPONENTS/YOUTUBE VIDEO HERO SECTION
+--------------------------------------------------------------*/
+
+.gg-youtube-video-hero {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(flex-end);
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 30%;
+        z-index: 9;
+
+        @include gradient(rgba(black, .9), rgba($black, 0), vertical);
+    }
+
+    &__content {
+        @include flexbox();
+        @include flex-direction(column);
+        @include align-items(center);
+        @include justify-content(center);
+        @include make-container(); // bs
+        @include make-container-max-widths();
+        // @include center();
+        padding-bottom: $global-padding*2;
+        height: 70%;
+        z-index: 10;
+
+        @include breakpoint(medium) {
+            padding-bottom: $global-padding*4;
+        }
+
+        @include breakpoint(large) {
+            padding-bottom: $global-padding*4;
+        }
+
+        .intro {
+            &-title {
+                text-shadow: 1px 1px 0px $black;
+                font-size: clamp(1.5rem, 5vw, 3.25rem);
+            }
+
+            &-subtitle {
+                text-shadow: 1px 1px 0px $black;
+            }
+        }
+
+        /* &-title {
+            color: #fff;
+            font-family: Georgia, Times, Times New Roman, serif;
+            font-size: clamp(1.5rem, 5vw, 3.25rem);
+            line-height: 1.75rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.375em;
+            font-weight: lighter;
+            margin-bottom: 2.625rem;
+        }
+
+        */
+
+        &-play {
+            display: block;
+            position: relative;
+            width: 4rem;
+            height: 4rem;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            background: rgba(22, 22, 16, 0.75);
+            text-indent: -9999px;
+            transition: border-color 0.3s ease;
+            animation: pulse 3s infinite;
+
+            &:hover {
+                border-color: #fff;
+                animation: none;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 1rem;
+                left: 1.425rem;
+                width: 0;
+                height: 0;
+                border: 0;
+                border-color: transparent transparent transparent #fff;
+                border-style: solid;
+                border-width: 1rem 0 1rem 1.5rem;
+            }
+        }
+    }
+
+    &__loader {
+        @include center();
+        width: 100px;
+
+        &.loaded {
+            display: none;
+        }
+    }
+
+    &__video,
+    iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translate(-50%, -50%);
+        width: 100vw;
+        height: 56.25vw;
+        /* 9/16*100 = 56.25 */
+        min-height: 100vh;
+        min-width: 177.77vh;
+        /* 16/9*100 = 177.77 */
+    }
+
+    iframe {
+        opacity: 0;
+
+        &.loaded {
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 hsla(24, 37%, 69%, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px hsla(24, 37%, 69%, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 hsla(24, 37%, 69%, 0);
+    }
+}

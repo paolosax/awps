@@ -1,0 +1,40 @@
+/*--------------------------------------------------------------
+# ABSTRACTS/UTILITIES/TRANSPARENCY
+--------------------------------------------------------------*/
+
+$background-colors: (black: $black,
+    white: $white,
+);
+
+$transparency: (0: 0,
+    1: 0.1,
+    2: 0.15,
+    3: 0.2,
+    4: 0.25,
+    5: 0.3,
+    6: 0.35,
+    7: 0.4,
+    8: 0.45,
+    9: 0.5,
+    10: 0.55,
+    11: 0.60,
+    12: 0.65,
+    13: 0.70,
+    14: 0.75,
+    15: 0.80,
+    16: 0.95,
+);
+
+@each $bg-color,
+$color in $background-colors {
+
+    .alpha-#{$bg-color} {
+
+        @each $key,
+        $value in $transparency {
+            &--#{$key} {
+                background-color: rgba($color, $value);
+            }
+        }
+    }
+}

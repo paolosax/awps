@@ -1,0 +1,77 @@
+/*--------------------------------------------------------------
+# ABSTRACTS/UTILITIES/SPACING
+--------------------------------------------------------------*/
+
+$sides: (top, bottom, left, right); // Leave this variable alone
+$spacer: 1;
+$spacers: (0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 2),
+  5: ($spacer * 3),
+  6: ($spacer * 4.5),
+  7: ($spacer * 6.5),
+  8: ($spacer * 7.5),
+  9: ($spacer * 8.5),
+  10: ($spacer * 10),
+);
+
+@each $breakpoint,
+$value in $breakpoints {
+
+  @each $unit,
+  $rem in $spacers {
+    .p-#{$breakpoint}-#{$unit} {
+      @if $unit==0 {
+        padding: #{$rem};
+      }
+
+      @else {
+        @include breakpoint($breakpoint) {
+          padding: #{$rem}rem;
+        }
+      }
+    }
+
+    .m-#{$breakpoint}-#{$unit} {
+      @if $unit==0 {
+        margin: #{$rem};
+      }
+
+      @else {
+        @include breakpoint($breakpoint) {
+          margin: #{$rem}rem;
+        }
+      }
+    }
+
+    @each $side in $sides {
+      .p-#{$breakpoint}-#{str-slice($side, 0, 1)}-#{$unit} {
+        @if $unit==0 {
+          padding-#{$side}: #{$rem};
+        }
+
+        @else {
+          @include breakpoint($breakpoint) {
+            padding-#{$side}: #{$rem}rem;
+          }
+        }
+      }
+
+      .m-#{$breakpoint}-#{str-slice($side, 0, 1)}-#{$unit} {
+        @if $unit==0 {
+          margin-#{$side}: #{$rem};
+        }
+
+        @else {
+          @include breakpoint($breakpoint) {
+            margin-#{$side}: #{$rem}rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* @include padding(1, 0, 2, null); */

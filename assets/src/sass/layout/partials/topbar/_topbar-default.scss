@@ -1,0 +1,89 @@
+/*--------------------------------------------------------------
+# LAYOUT/PARTIALS/HEADERS/TOPBAR-DEFAULT
+--------------------------------------------------------------*/
+.topbar {
+    @include flexbox();
+    @include align-items(center);
+    @include transition(all .5s linear);
+
+    @each $breakpoint,
+    $value in $topbar_height {
+        @include height($value, $breakpoint)
+    }
+
+    // min-height: $topbarHeight_s;
+    background-color: $black;
+
+    @include breakpoint(medium) {
+        // min-height: $topbarHeight_m;
+    }
+
+    @include breakpoint(large) {
+        //  min-height: $topbarHeight_l;
+    }
+
+    &.hide-on-scroll {
+        height: 0;
+    }
+
+    /* .shift-on-scroll-down & {
+    display: none;
+} */
+
+    /* .shift-on-scroll-up & {
+    display: none;
+} */
+
+    &__wrapper {
+        >div {
+            &:not(:last-child) {
+                margin-right: $global-margin;
+            }
+        }
+
+        >div {
+            &:first-child {
+                margin-right: auto;
+            }
+        }
+    }
+
+    .widget {
+        @include flexbox();
+        @include align-items(center);
+    }
+
+    .nav {
+        .nav-link {
+            padding: 0;
+
+            &:not(:last-child) {
+                margin-right: $global-margin;
+
+                @include breakpoint(medium) {
+                    margin-right: $global-margin*2;
+                }
+
+                @include breakpoint(large) {
+                    margin-right: $global-margin;
+                }
+            }
+
+            i {
+                @include breakpoint(large) {
+                    margin-right: $global-margin/2;
+                }
+            }
+        }
+
+        span {
+            display: none;
+
+            @include breakpoint(medium) {}
+
+            @include breakpoint(large) {
+                display: inline-block;
+            }
+        }
+    }
+}

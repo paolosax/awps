@@ -1,0 +1,67 @@
+/*--------------------------------------------------------------
+# MIXINS - THEMIFY
+ref.: https://medium.com/@dmitriy.borodiy/easy-color-theming-with-scss-bc38fd5734d1
+ref.: https://gist.github.com/dmitru/39245f9e702dad9b04d504c549fc1814
+USAGE:
+  html:
+  <body class="theme-dark">
+    [...]
+  styles:
+    @include themify($themes) {
+        color: themed('textColor');  
+        background-color: themed('backgroundColor');  
+      }
+--------------------------------------------------------------*/
+
+@import '../themes';
+
+@mixin themify($themes: $themes) {
+
+  @each $theme,
+  $map in $themes {
+
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+
+      @each $key,
+      $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+
+  }
+}
+
+@function themed($theme-key) {
+  @return map-get($theme-map, $theme-key);
+}
+
+// skins
+@mixin skinify($skins: $skins) {
+
+  @each $skin,
+  $map in $skins {
+
+    .skin-#{$skin} & {
+      $skin-map: () !global;
+
+      @each $key,
+      $submap in $map {
+        $value: map-get(map-get($skins, $skin), '#{$key}');
+        $skin-map: map-merge($skin-map, ($key: $value)) !global;
+      }
+
+      @content;
+      $skin-map: null !global;
+    }
+
+  }
+}
+
+@function skin($skin-key) {
+  @return map-get($skin-map, $skin-key);
+}

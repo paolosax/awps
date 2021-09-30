@@ -1,0 +1,876 @@
+// Colors
+/* $color-facebook  : #3B5998;
+$color-twitter   : #55ACEE;
+$color-pinterest : #CC2127;
+$color-youtube   : #E52D27; */
+
+$color-500px: #0099e5;
+$color-accessible-icon: #336699;
+$color-accusoft: #336699;
+$color-acquisitions-incorporated: #336699;
+$color-adn: #336699;
+$color-adobe: #ff0000;
+$color-adversal: #336699;
+$color-affiliatetheme: #336699;
+$color-algolia: #050f2c;
+$color-alipay: #336699;
+$color-amazon: #ff9900;
+$color-amazon-pay: #146eb4;
+$color-amilia: #336699;
+$color-android: #a4c639;
+$color-angellist: #336699;
+$color-angrycreative: #336699;
+$color-angular: #b52e31;
+$color-app-store: #336699;
+$color-app-store-ios: #336699;
+$color-apper: #336699;
+$color-apple: #a6b1b7;
+$color-apple-pay: #a6b1b7;
+$color-artstation: #336699;
+$color-asymmetrik: #336699;
+$color-atlassian: #003366;
+$color-audible: #336699;
+$color-autoprefixer: #336699;
+$color-avianex: #336699;
+$color-aviato: #336699;
+$color-aws: #336699;
+$color-bandcamp: #629aa9;
+$color-behance: #1769ff;
+$color-behance-square: #1769ff;
+$color-bimobject: #336699;
+$color-bitbucket: #205081;
+$color-bitcoin: #336699;
+$color-bity: #ee6123;
+$color-black-tie: #336699;
+$color-blackberry: #336699;
+$color-blogger: #f57d00;
+$color-blogger-b: #f57d00;
+$color-bluetooth: #336699;
+$color-bluetooth-b: #336699;
+$color-btc: #336699;
+$color-buromobelexperte: #336699;
+$color-buysellads: #336699;
+$color-canadian-maple-leaf: #336699;
+$color-cc-amazon-pay: #336699;
+$color-cc-amex: #336699;
+$color-cc-apple-pay: #336699;
+$color-cc-diners-club: #336699;
+$color-cc-discover: #336699;
+$color-cc-jcb: #336699;
+$color-cc-mastercard: #336699;
+$color-cc-paypal: #336699;
+$color-cc-stripe: #336699;
+$color-cc-visa: #336699;
+$color-centercode: #336699;
+$color-centos: #336699;
+$color-chrome: #336699;
+$color-cloudscale: #336699;
+$color-cloudsmith: #336699;
+$color-cloudversify: #336699;
+$color-codepen: #0ebeff;
+$color-codiepie: #336699;
+$color-confluence: #336699;
+$color-connectdevelop: #336699;
+$color-contao: #336699;
+$color-cpanel: #336699;
+$color-creative-commons: #336699;
+$color-creative-commons-by: #336699;
+$color-creative-commons-nc: #336699;
+$color-creative-commons-nc-eu: #336699;
+$color-creative-commons-nc-jp: #336699;
+$color-creative-commons-nd: #336699;
+$color-creative-commons-pd: #336699;
+$color-creative-commons-pd-alt: #336699;
+$color-creative-commons-remix: #336699;
+$color-creative-commons-sa: #336699;
+$color-creative-commons-sampling: #336699;
+$color-creative-commons-sampling-plus: #336699;
+$color-creative-commons-share: #336699;
+$color-creative-commons-zero: #336699;
+$color-critical-role: #336699;
+$color-css3: #336699;
+$color-css3-alt: #336699;
+$color-cuttlefish: #336699;
+$color-d-and-d: #336699;
+$color-d-and-d-beyond: #336699;
+$color-dashcube: #336699;
+$color-delicious: #336699;
+$color-deploydog: #336699;
+$color-deskpro: #336699;
+$color-dev: #336699;
+$color-deviantart: #05cc47;
+$color-dhl: #336699;
+$color-diaspora: #336699;
+$color-digg: #005be2;
+$color-digital-ocean: #336699;
+$color-discord: #7289da;
+$color-discourse: #336699;
+$color-dochub: #336699;
+$color-docker: #336699;
+$color-draft2digital: #336699;
+$color-dribbble: #ea4c89;
+$color-dribbble-square: #ea4c89;
+$color-dropbox: #007ee5;
+$color-drupal: #0077c0;
+$color-dyalog: #336699;
+$color-earlybirds: #336699;
+$color-ebay: #e53238;
+$color-edge: #336699;
+$color-elementor: #336699;
+$color-ello: #336699;
+$color-ember: #336699;
+$color-empire: #336699;
+$color-envira: #336699;
+$color-erlang: #336699;
+$color-ethereum: #336699;
+$color-etsy: #336699;
+$color-expeditedssl: #336699;
+$color-facebook: #1877f2;
+$color-facebook-f: #3b5998;
+$color-facebook-messenger: #336699;
+$color-facebook-square: #336699;
+$color-fantasy-flight-games: #336699;
+$color-fedex: #4d148c;
+$color-fedora: #336699;
+$color-figma: #336699;
+$color-firefox: #e66000;
+$color-first-order: #336699;
+$color-first-order-alt: #336699;
+$color-firstdraft: #336699;
+$color-flickr: #ff0084;
+$color-flipboard: #e12828;
+$color-fly: #336699;
+$color-font-awesome: #228ae6;
+$color-font-awesome-alt: #228ae6;
+$color-font-awesome-flag: #228ae6;
+$color-fonticons: #336699;
+$color-fonticons-fi: #336699;
+$color-fort-awesome: #336699;
+$color-fort-awesome-alt: #336699;
+$color-forumbee: #336699;
+$color-foursquare: #f94877;
+$color-free-code-camp: #336699;
+$color-freebsd: #336699;
+$color-fulcrum: #336699;
+$color-galactic-republic: #336699;
+$color-galactic-senate: #336699;
+$color-get-pocket: #336699;
+$color-gg: #336699;
+$color-gg-circle: #336699;
+$color-git: #336699;
+$color-git-square: #336699;
+$color-github: #4078c0;
+$color-github-alt: #4078c0;
+$color-github-square: #4078c0;
+$color-gitkraken: #336699;
+$color-gitlab: #fc6d26;
+$color-gitter: #336699;
+$color-glide: #336699;
+$color-glide-g: #336699;
+$color-gofore: #336699;
+$color-goodreads: #336699;
+$color-goodreads-g: #336699;
+$color-google: #4285f4;
+$color-google-drive: #34a853;
+$color-google-play: #fbbc05;
+$color-google-plus: #dd4b39;
+$color-google-plus-g: #dd4b39;
+$color-google-plus-square: #dd4b39;
+$color-google-wallet: #ea4335;
+$color-gratipay: #336699;
+$color-grav: #336699;
+$color-gripfire: #336699;
+$color-grunt: #fba919;
+$color-gulp: #336699;
+$color-hacker-news: #336699;
+$color-hacker-news-square: #336699;
+$color-hackerrank: #336699;
+$color-hips: #336699;
+$color-hire-a-helper: #336699;
+$color-hooli: #336699;
+$color-hornbill: #336699;
+$color-hotjar: #336699;
+$color-houzz: #336699;
+$color-html5: #336699;
+$color-hubspot: #336699;
+$color-imdb: #336699;
+$color-instagram: #c32aa3;
+$color-intercom: #336699;
+$color-internet-explorer: #336699;
+$color-invision: #336699;
+$color-ioxhost: #336699;
+$color-itunes: #336699;
+$color-itunes-note: #336699;
+$color-java: #336699;
+$color-jedi-order: #336699;
+$color-jenkins: #336699;
+$color-jira: #336699;
+$color-joget: #336699;
+$color-joomla: #336699;
+$color-js: #336699;
+$color-js-square: #336699;
+$color-jsfiddle: #336699;
+$color-kaggle: #336699;
+$color-keybase: #336699;
+$color-keycdn: #336699;
+$color-kickstarter: #336699;
+$color-kickstarter-k: #336699;
+$color-korvue: #336699;
+$color-laravel: #336699;
+$color-lastfm: #336699;
+$color-lastfm-square: #336699;
+$color-leanpub: #336699;
+$color-less: #336699;
+$color-line: #336699;
+$color-linkedin: #007bb5;
+$color-linkedin-in: #007bb5;
+$color-linode: #336699;
+$color-linux: #336699;
+$color-lyft: #336699;
+$color-magento: #336699;
+$color-mailchimp: #336699;
+$color-mandalorian: #336699;
+$color-markdown: #336699;
+$color-mastodon: #2b90d9;
+$color-maxcdn: #336699;
+$color-medapps: #336699;
+$color-medium: #02b875;
+$color-medium-m: #02b875;
+$color-medrt: #336699;
+$color-meetup: #336699;
+$color-megaport: #336699;
+$color-mendeley: #336699;
+$color-microsoft: #03a5f0;
+$color-mix: #336699;
+$color-mixcloud: #336699;
+$color-mizuni: #336699;
+$color-modx: #336699;
+$color-monero: #336699;
+$color-napster: #336699;
+$color-neos: #336699;
+$color-nimblr: #336699;
+$color-nintendo-switch: #336699;
+$color-node: #336699;
+$color-node-js: #336699;
+$color-npm: #336699;
+$color-ns8: #336699;
+$color-nutritionix: #336699;
+$color-odnoklassniki: #336699;
+$color-odnoklassniki-square: #336699;
+$color-old-republic: #336699;
+$color-opencart: #336699;
+$color-openid: #336699;
+$color-opera: #336699;
+$color-optin-monster: #336699;
+$color-osi: #336699;
+$color-page4: #336699;
+$color-pagelines: #336699;
+$color-palfed: #336699;
+$color-patreon: #336699;
+$color-paypal: #336699;
+$color-penny-arcade: #336699;
+$color-periscope: #40a4c4;
+$color-phabricator: #336699;
+$color-phoenix-framework: #336699;
+$color-phoenix-squadron: #336699;
+$color-php: #336699;
+$color-pied-piper: #336699;
+$color-pied-piper-alt: #336699;
+$color-pied-piper-hat: #336699;
+$color-pied-piper-pp: #336699;
+$color-pinterest: #bd081c;
+$color-pinterest-p: #bd081c;
+$color-pinterest-square: #bd081c;
+$color-playstation: #336699;
+$color-product-hunt: #336699;
+$color-pushed: #336699;
+$color-python: #336699;
+$color-qq: #336699;
+$color-quinscape: #336699;
+$color-quora: #aa2200;
+$color-r-project: #336699;
+$color-raspberry-pi: #336699;
+$color-ravelry: #336699;
+$color-react: #336699;
+$color-reacteurope: #336699;
+$color-readme: #336699;
+$color-rebel: #336699;
+$color-red-river: #336699;
+$color-reddit: #ff5700;
+$color-reddit-alien: #ff5700;
+$color-reddit-square: #ff5700;
+$color-redhat: #336699;
+$color-renren: #336699;
+$color-replyd: #336699;
+$color-researchgate: #336699;
+$color-resolving: #336699;
+$color-rev: #336699;
+$color-rocketchat: #336699;
+$color-rockrms: #336699;
+$color-safari: #336699;
+$color-sass: #336699;
+$color-schlix: #336699;
+$color-scribd: #336699;
+$color-searchengin: #336699;
+$color-sellcast: #336699;
+$color-sellsy: #336699;
+$color-servicestack: #336699;
+$color-shirtsinbulk: #336699;
+$color-shopware: #336699;
+$color-simplybuilt: #336699;
+$color-sistrix: #336699;
+$color-sith: #336699;
+$color-sketch: #336699;
+$color-skyatlas: #336699;
+$color-skype: #00aff0;
+$color-slack: #4a154b;
+$color-slack-hash: #4a154b;
+$color-slideshare: #e68523;
+$color-snapchat: #fffc00;
+$color-snapchat-ghost: #fffc00;
+$color-snapchat-square: #fffc00;
+$color-soundcloud: #ff5500;
+$color-sourcetree: #336699;
+$color-speakap: #336699;
+$color-spotify: #1ed760;
+$color-squarespace: #336699;
+$color-stack-exchange: #336699;
+$color-stack-overflow: #336699;
+$color-staylinked: #336699;
+$color-steam: #171a21;
+$color-steam-square: #171a21;
+$color-steam-symbol: #171a21;
+$color-sticker-mule: #336699;
+$color-strava: #336699;
+$color-stripe: #336699;
+$color-stripe-s: #336699;
+$color-studiovinari: #336699;
+$color-stumbleupon: #e94826;
+$color-stumbleupon-circle: #e94826;
+$color-superpowers: #336699;
+$color-supple: #336699;
+$color-suse: #336699;
+$color-teamspeak: #336699;
+$color-telegram: #0088cc;
+$color-telegram-plane: #0088cc;
+$color-tencent-weibo: #336699;
+$color-the-red-yeti: #336699;
+$color-themeco: #336699;
+$color-themeisle: #336699;
+$color-think-peaks: #336699;
+$color-trade-federation: #336699;
+$color-trello: #336699;
+$color-tripadvisor: #336699;
+$color-tumblr: #2c4762;
+$color-tumblr-square: #336699;
+$color-twitch: #6441a4;
+$color-twitter: #1da1f2;
+$color-twitter-square: #1da1f2;
+$color-typo3: #336699;
+$color-uber: #336699;
+$color-ubuntu: #336699;
+$color-uikit: #336699;
+$color-uniregistry: #336699;
+$color-untappd: #336699;
+$color-ups: #336699;
+$color-usb: #336699;
+$color-usps: #336699;
+$color-ussunnah: #336699;
+$color-vaadin: #336699;
+$color-viacoin: #336699;
+$color-viadeo: #336699;
+$color-viadeo-square: #336699;
+$color-viber: #336699;
+$color-vimeo: rgb(26, 183, 234);
+$color-vimeo-square: rgb(26, 183, 234);
+$color-vimeo-v: rgb(26, 183, 234);
+$color-vine: #00b489;
+$color-vk: #4a76a8;
+$color-vnv: #336699;
+$color-vuejs: #336699;
+$color-weebly: #336699;
+$color-weibo: #336699;
+$color-weixin: #336699;
+$color-whatsapp: #25d366;
+$color-whatsapp-square: #25d366;
+$color-whmcs: #336699;
+$color-wikipedia-w: #336699;
+$color-windows: #336699;
+$color-wix: #336699;
+$color-wizards-of-the-coast: #336699;
+$color-wolf-pack-battalion: #336699;
+$color-wordpress: #336699;
+$color-wordpress-simple: #336699;
+$color-wpbeginner: #336699;
+$color-wpexplorer: #336699;
+$color-wpforms: #336699;
+$color-wpressr: #336699;
+$color-xbox: #336699;
+$color-xing: #336699;
+$color-xing-square: #336699;
+$color-y-combinator: #336699;
+$color-yahoo: #430297;
+$color-yandex: #336699;
+$color-yandex-international: #336699;
+$color-yarn: #336699;
+$color-yelp: #336699;
+$color-yoast: #336699;
+$color-youtube: #ff0000;
+$color-youtube-square: #ff0000;
+$color-zhihu: #336699;
+
+
+$social-media-colors: ( // 500px: $color-500px,
+    // accessible-icon: $color-accessible-icon,
+    // accusoft: $color-accusoft,
+    // acquisitions-incorporated: $color-acquisitions-incorporated,
+    // adn: $color-adn,
+    // adobe: $color-adobe,
+    // adversal: $color-adversal,
+    // affiliatetheme: $color-affiliatetheme,
+    // algolia: $color-algolia,
+    // alipay: $color-alipay,
+    // amazon: $color-amazon,
+    // amazon-pay: $color-amazon-pay,
+    // amilia: $color-amilia,
+    // android: $color-android,
+    // angellist: $color-angellist,
+    // angrycreative: $color-angrycreative,
+    // angular: $color-angular,
+    // app-store: $color-app-store,
+    // app-store-ios: $color-app-store-ios,
+    // apper: $color-apper,
+    // apple: $color-apple,
+    // apple-pay: $color-apple-pay,
+    // artstation: $color-artstation,
+    // asymmetrik: $color-asymmetrik,
+    // atlassian: $color-atlassian,
+    // audible: $color-audible,
+    // autoprefixer: $color-autoprefixer,
+    // avianex: $color-avianex,
+    // aviato: $color-aviato,
+    // aws: $color-aws,
+    // bandcamp: $color-bandcamp,
+    // behance: $color-behance,
+    // behance-square: $color-behance-square,
+    // bimobject: $color-bimobject,
+    // bitbucket: $color-bitbucket,
+    // bitcoin: $color-bitcoin,
+    // bity: $color-bity,
+    // black-tie: $color-black-tie,
+    // blackberry: $color-blackberry,
+    // blogger: $color-blogger,
+    // blogger-b: $color-blogger-b,
+    // bluetooth: $color-bluetooth,
+    // bluetooth-b: $color-bluetooth-b,
+    // btc: $color-btc,
+    // buromobelexperte: $color-buromobelexperte,
+    // buysellads: $color-buysellads,
+    // canadian-maple-leaf: $color-canadian-maple-leaf,
+    // cc-amazon-pay: $color-cc-amazon-pay,
+    // cc-amex: $color-cc-amex,
+    // cc-apple-pay: $color-cc-apple-pay,
+    // cc-diners-club: $color-cc-diners-club,
+    // cc-discover: $color-cc-discover,
+    // cc-jcb: $color-cc-jcb,
+    // cc-mastercard: $color-cc-mastercard,
+    // cc-paypal: $color-cc-paypal,
+    // cc-stripe: $color-cc-stripe,
+    // cc-visa: $color-cc-visa,
+    // centercode: $color-centercode,
+    // centos: $color-centos,
+    // chrome: $color-chrome,
+    // cloudscale: $color-cloudscale,
+    // cloudsmith: $color-cloudsmith,
+    // cloudversify: $color-cloudversify,
+    // codepen: $color-codepen,
+    // codiepie: $color-codiepie,
+    // confluence: $color-confluence,
+    // connectdevelop: $color-connectdevelop,
+    // contao: $color-contao,
+    // cpanel: $color-cpanel,
+    // creative-commons: $color-creative-commons,
+    // creative-commons-by: $color-creative-commons-by,
+    // creative-commons-nc: $color-creative-commons-nc,
+    // creative-commons-nc-eu: $color-creative-commons-nc-eu,
+    // creative-commons-nc-jp: $color-creative-commons-nc-jp,
+    // creative-commons-nd: $color-creative-commons-nd,
+    // creative-commons-pd: $color-creative-commons-pd,
+    // creative-commons-pd-alt: $color-creative-commons-pd-alt,
+    // creative-commons-remix: $color-creative-commons-remix,
+    // creative-commons-sa: $color-creative-commons-sa,
+    // creative-commons-sampling: $color-creative-commons-sampling,
+    // creative-commons-sampling-plus: $color-creative-commons-sampling-plus,
+    // creative-commons-share: $color-creative-commons-share,
+    // creative-commons-zero: $color-creative-commons-zero,
+    // critical-role: $color-critical-role,
+    // css3: $color-css3,
+    // css3-alt: $color-css3-alt,
+    // cuttlefish: $color-cuttlefish,
+    // d-and-d: $color-d-and-d,
+    // d-and-d-beyond: $color-d-and-d-beyond,
+    // dashcube: $color-dashcube,
+    // delicious: $color-delicious,
+    // deploydog: $color-deploydog,
+    // deskpro: $color-deskpro,
+    // dev: $color-dev,
+    // deviantart: $color-deviantart,
+    // dhl: $color-dhl,
+    // diaspora: $color-diaspora,
+    // digg: $color-digg,
+    // digital-ocean: $color-digital-ocean,
+    // discord: $color-discord,
+    // discourse: $color-discourse,
+    // dochub: $color-dochub,
+    // docker: $color-docker,
+    // draft2digital: $color-draft2digital,
+    // dribbble: $color-dribbble,
+    // dribbble-square: $color-dribbble-square,
+    // dropbox: $color-dropbox,
+    // drupal: $color-drupal,
+    // dyalog: $color-dyalog,
+    // earlybirds: $color-earlybirds,
+    // ebay: $color-ebay,
+    // edge: $color-edge,
+    // elementor: $color-elementor,
+    // ello: $color-ello,
+    // ember: $color-ember,
+    // empire: $color-empire,
+    // envira: $color-envira,
+    // erlang: $color-erlang,
+    // ethereum: $color-ethereum,
+    // etsy: $color-etsy,
+    // expeditedssl: $color-expeditedssl,
+    facebook: $color-facebook,
+    facebook-f: $color-facebook-f,
+    // facebook-messenger: $color-facebook-messenger,
+    // facebook-square: $color-facebook-square,
+    // fantasy-flight-games: $color-fantasy-flight-games,
+    // fedex: $color-fedex,
+    // fedora: $color-fedora,
+    // figma: $color-figma,
+    // firefox: $color-firefox,
+    // first-order: $color-first-order,
+    // first-order-alt: $color-first-order-alt,
+    // firstdraft: $color-firstdraft,
+    // flickr: $color-flickr,
+    // flipboard: $color-flipboard,
+    // fly: $color-fly,
+    // font-awesome: $color-font-awesome,
+    // font-awesome-alt: $color-font-awesome-alt,
+    // font-awesome-flag: $color-font-awesome-flag,
+    // fonticons: $color-fonticons,
+    // fonticons-fi: $color-fonticons-fi,
+    // fort-awesome: $color-fort-awesome,
+    // fort-awesome-alt: $color-fort-awesome-alt,
+    // forumbee: $color-forumbee,
+    // foursquare: $color-foursquare,
+    // free-code-camp: $color-free-code-camp,
+    // freebsd: $color-freebsd,
+    // fulcrum: $color-fulcrum,
+    // galactic-republic: $color-galactic-republic,
+    // galactic-senate: $color-galactic-senate,
+    // get-pocket: $color-get-pocket,
+    // gg: $color-gg,
+    // gg-circle: $color-gg-circle,
+    // git: $color-git,
+    // git-square: $color-git-square,
+    // github: $color-github,
+    // github-alt: $color-github-alt,
+    // github-square: $color-github-square,
+    // gitkraken: $color-gitkraken,
+    // gitlab: $color-gitlab,
+    // gitter: $color-gitter,
+    // glide: $color-glide,
+    // glide-g: $color-glide-g,
+    // gofore: $color-gofore,
+    // goodreads: $color-goodreads,
+    // goodreads-g: $color-goodreads-g,
+    // google: $color-google,
+    // google-drive: $color-google-drive,
+    // google-play: $color-google-play,
+    // google-plus: $color-google-plus,
+    // google-plus-g: $color-google-plus-g,
+    // google-plus-square: $color-google-plus-square,
+    // google-wallet: $color-google-wallet,
+    // gratipay: $color-gratipay,
+    // grav: $color-grav,
+    // gripfire: $color-gripfire,
+    // grunt: $color-grunt,
+    // gulp: $color-gulp,
+    // hacker-news: $color-hacker-news,
+    // hacker-news-square: $color-hacker-news-square,
+    // hackerrank: $color-hackerrank,
+    // hips: $color-hips,
+    // hire-a-helper: $color-hire-a-helper,
+    // hooli: $color-hooli,
+    // hornbill: $color-hornbill,
+    // hotjar: $color-hotjar,
+    // houzz: $color-houzz,
+    // html5: $color-html5,
+    // hubspot: $color-hubspot,
+    // imdb: $color-imdb,
+    instagram: $color-instagram,
+    // intercom: $color-intercom,
+    // internet-explorer: $color-internet-explorer,
+    // invision: $color-invision,
+    // ioxhost: $color-ioxhost,
+    // itunes: $color-itunes,
+    // itunes-note: $color-itunes-note,
+    // java: $color-java,
+    // jedi-order: $color-jedi-order,
+    // jenkins: $color-jenkins,
+    // jira: $color-jira,
+    // joget: $color-joget,
+    // joomla: $color-joomla,
+    // js: $color-js,
+    // js-square: $color-js-square,
+    // jsfiddle: $color-jsfiddle,
+    // kaggle: $color-kaggle,
+    // keybase: $color-keybase,
+    // keycdn: $color-keycdn,
+    // kickstarter: $color-kickstarter,
+    // kickstarter-k: $color-kickstarter-k,
+    // korvue: $color-korvue,
+    // laravel: $color-laravel,
+    // lastfm: $color-lastfm,
+    // lastfm-square: $color-lastfm-square,
+    // leanpub: $color-leanpub,
+    // less: $color-less,
+    // line: $color-line,
+    // linkedin: $color-linkedin,
+    // linkedin-in: $color-linkedin-in,
+    // linode: $color-linode,
+    // linux: $color-linux,
+    // lyft: $color-lyft,
+    // magento: $color-magento,
+    // mailchimp: $color-mailchimp,
+    // mandalorian: $color-mandalorian,
+    // markdown: $color-markdown,
+    // mastodon: $color-mastodon,
+    // maxcdn: $color-maxcdn,
+    // medapps: $color-medapps,
+    // medium: $color-medium,
+    // medium-m: $color-medium-m,
+    // medrt: $color-medrt,
+    // meetup: $color-meetup,
+    // megaport: $color-megaport,
+    // mendeley: $color-mendeley,
+    // microsoft: $color-microsoft,
+    // mix: $color-mix,
+    // mixcloud: $color-mixcloud,
+    // mizuni: $color-mizuni,
+    // modx: $color-modx,
+    // monero: $color-monero,
+    // napster: $color-napster,
+    // neos: $color-neos,
+    // nimblr: $color-nimblr,
+    // nintendo-switch: $color-nintendo-switch,
+    // node: $color-node,
+    // node-js: $color-node-js,
+    // npm: $color-npm,
+    // ns8: $color-ns8,
+    // nutritionix: $color-nutritionix,
+    // odnoklassniki: $color-odnoklassniki,
+    // odnoklassniki-square: $color-odnoklassniki-square,
+    // old-republic: $color-old-republic,
+    // opencart: $color-opencart,
+    // openid: $color-openid,
+    // opera: $color-opera,
+    // optin-monster: $color-optin-monster,
+    // osi: $color-osi,
+    // page4: $color-page4,
+    // pagelines: $color-pagelines,
+    // palfed: $color-palfed,
+    // patreon: $color-patreon,
+    // paypal: $color-paypal,
+    // penny-arcade: $color-penny-arcade,
+    // periscope: $color-periscope,
+    // phabricator: $color-phabricator,
+    // phoenix-framework: $color-phoenix-framework,
+    // phoenix-squadron: $color-phoenix-squadron,
+    // php: $color-php,
+    // pied-piper: $color-pied-piper,
+    // pied-piper-alt: $color-pied-piper-alt,
+    // pied-piper-hat: $color-pied-piper-hat,
+    // pied-piper-pp: $color-pied-piper-pp,
+    // pinterest: $color-pinterest,
+    // pinterest-p: $color-pinterest-p,
+    // pinterest-square: $color-pinterest-square,
+    // playstation: $color-playstation,
+    // product-hunt: $color-product-hunt,
+    // pushed: $color-pushed,
+    // python: $color-python,
+    // qq: $color-qq,
+    // quinscape: $color-quinscape,
+    // quora: $color-quora,
+    // r-project: $color-r-project,
+    // raspberry-pi: $color-raspberry-pi,
+    // ravelry: $color-ravelry,
+    // react: $color-react,
+    // reacteurope: $color-reacteurope,
+    // readme: $color-readme,
+    // rebel: $color-rebel,
+    // red-river: $color-red-river,
+    // reddit: $color-reddit,
+    // reddit-alien: $color-reddit-alien,
+    // reddit-square: $color-reddit-square,
+    // redhat: $color-redhat,
+    // renren: $color-renren,
+    // replyd: $color-replyd,
+    // researchgate: $color-researchgate,
+    // resolving: $color-resolving,
+    // rev: $color-rev,
+    // rocketchat: $color-rocketchat,
+    // rockrms: $color-rockrms,
+    // safari: $color-safari,
+    // sass: $color-sass,
+    // schlix: $color-schlix,
+    // scribd: $color-scribd,
+    // searchengin: $color-searchengin,
+    // sellcast: $color-sellcast,
+    // sellsy: $color-sellsy,
+    // servicestack: $color-servicestack,
+    // shirtsinbulk: $color-shirtsinbulk,
+    // shopware: $color-shopware,
+    // simplybuilt: $color-simplybuilt,
+    // sistrix: $color-sistrix,
+    // sith: $color-sith,
+    // sketch: $color-sketch,
+    // skyatlas: $color-skyatlas,
+    // skype: $color-skype,
+    // slack: $color-slack,
+    // slack-hash: $color-slack-hash,
+    // slideshare: $color-slideshare,
+    // snapchat: $color-snapchat,
+    // snapchat-ghost: $color-snapchat-ghost,
+    // snapchat-square: $color-snapchat-square,
+    // soundcloud: $color-soundcloud,
+    // sourcetree: $color-sourcetree,
+    // speakap: $color-speakap,
+    // spotify: $color-spotify,
+    // squarespace: $color-squarespace,
+    // stack-exchange: $color-stack-exchange,
+    // stack-overflow: $color-stack-overflow,
+    // staylinked: $color-staylinked,
+    // steam: $color-steam,
+    // steam-square: $color-steam-square,
+    // steam-symbol: $color-steam-symbol,
+    // sticker-mule: $color-sticker-mule,
+    // strava: $color-strava,
+    // stripe: $color-stripe,
+    // stripe-s: $color-stripe-s,
+    // studiovinari: $color-studiovinari,
+    // stumbleupon: $color-stumbleupon,
+    // stumbleupon-circle: $color-stumbleupon-circle,
+    // superpowers: $color-superpowers,
+    // supple: $color-supple,
+    // suse: $color-suse,
+    // teamspeak: $color-teamspeak,
+    // telegram: $color-telegram,
+    // telegram-plane: $color-telegram-plane,
+    // tencent-weibo: $color-tencent-weibo,
+    // the-red-yeti: $color-the-red-yeti,
+    // themeco: $color-themeco,
+    // themeisle: $color-themeisle,
+    // think-peaks: $color-think-peaks,
+    // trade-federation: $color-trade-federation,
+    // trello: $color-trello,
+    // tripadvisor: $color-tripadvisor,
+    // tumblr: $color-tumblr,
+    // tumblr-square: $color-tumblr-square,
+    // twitch: $color-twitch,
+    twitter: $color-twitter,
+    twitter-square: $color-twitter-square,
+    // typo3: $color-typo3,
+    // uber: $color-uber,
+    // ubuntu: $color-ubuntu,
+    // uikit: $color-uikit,
+    // uniregistry: $color-uniregistry,
+    // untappd: $color-untappd,
+    // ups: $color-ups,
+    // usb: $color-usb,
+    // usps: $color-usps,
+    // ussunnah: $color-ussunnah,
+    // vaadin: $color-vaadin,
+    // viacoin: $color-viacoin,
+    // viadeo: $color-viadeo,
+    // viadeo-square: $color-viadeo-square,
+    // viber: $color-viber,
+    vimeo: $color-vimeo,
+    vimeo-square: $color-vimeo-square,
+    vimeo-v: $color-vimeo-v,
+    // vine: $color-vine,
+    // vk: $color-vk,
+    // vnv: $color-vnv,
+    // vuejs: $color-vuejs,
+    // weebly: $color-weebly,
+    // weibo: $color-weibo,
+    // weixin: $color-weixin,
+    // whatsapp: $color-whatsapp,
+    // whatsapp-square: $color-whatsapp-square,
+    // whmcs: $color-whmcs,
+    // wikipedia-w: $color-wikipedia-w,
+    // windows: $color-windows,
+    // wix: $color-wix,
+    // wizards-of-the-coast: $color-wizards-of-the-coast,
+    // wolf-pack-battalion: $color-wolf-pack-battalion,
+    // wordpress: $color-wordpress,
+    // wordpress-simple: $color-wordpress-simple,
+    // wpbeginner: $color-wpbeginner,
+    // wpexplorer: $color-wpexplorer,
+    // wpforms: $color-wpforms,
+    // wpressr: $color-wpressr,
+    // xbox: $color-xbox,
+    // xing: $color-xing,
+    // xing-square: $color-xing-square,
+    // y-combinator: $color-y-combinator,
+    // yahoo: $color-yahoo,
+    // yandex: $color-yandex,
+    // yandex-international: $color-yandex-international,
+    // yarn: $color-yarn,
+    // yelp: $color-yelp,
+    // yoast: $color-yoast,
+    youtube: $color-youtube,
+    youtube-square: $color-youtube-square,
+    // zhihu: $color-zhihu,
+);
+
+%social-item-icon {
+
+    /*    border-radius: 50%;
+   padding: .5rem;
+   text-align: center;
+   background-size: cover;
+   background-repeat: no-repeat; */
+    @each $theme,
+    $color in $social-media-colors {
+        &--#{$theme} {
+            a {
+                color: $color !important;
+            }
+
+            a:hover {
+                color: lighten($color, 30) !important;
+            }
+        }
+    }
+}
+
+.social-item-icon {
+
+    @each $theme,
+    $color in $social-media-colors {
+        &--#{$theme} {
+            color: $color !important;
+
+            &:hover {
+                color: darken($color, 15) !important;
+                border-color: $color !important;
+            }
+        }
+    }
+}
+
+// Usage:
+// .social-media-icon--facebook

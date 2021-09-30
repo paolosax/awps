@@ -1,0 +1,112 @@
+/*--------------------------------------------------------------
+# ABSTRACTS/UTILITIES/ALIGNEMENTS
+https://stackoverflow.com/questions/46828282/generating-flexbox-classes-using-sass
+--------------------------------------------------------------*/
+
+$justify-positions: (flex-start: flex-start,
+  flex-end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly,
+  start: start,
+  end: end,
+  left: left,
+  right: right,
+);
+
+$align-items-positions: (stretch: stretch,
+  flex-start: flex-start,
+  flex-end: flex-end,
+  center: center,
+  baseline: baseline,
+  first-baseline: first baseline,
+  last-baseline: last baseline,
+  start: start,
+  end: end,
+  self-start: self-start,
+  self-end: self-end,
+);
+
+$align-content-positions: (flex-start: flex-start,
+  flex-end: flex-end,
+  center: center,
+  space-between: space-between,
+  space-around: space-around,
+  space-evenly: space-evenly,
+  stretch: stretch,
+  start: start,
+  end: end,
+  baseline: baseline,
+  first-baseline: first baseline,
+  last-baseline: last baseline,
+);
+
+$align-self-positions: (auto: auto,
+  flex-start: flex-start,
+  flex-end: flex-end,
+  center: center,
+  baseline: baseline,
+  stretch: stretch,
+);
+
+@each $mod,
+$dir in $justify-positions {
+  .h-justify--#{$mod} {
+    @include justify-content($dir, '!important');
+  }
+}
+
+@each $mod,
+$dir in $align-items-positions {
+  .h-align-items--#{$mod} {
+    @include align-items($dir);
+  }
+}
+
+@each $mod,
+$dir in $align-content-positions {
+  .h-align-content--#{$mod} {
+    @include align-content($dir);
+  }
+}
+
+@each $mod,
+$dir in $align-self-positions {
+  .h-align-self--#{$mod} {
+    @include align-self($dir);
+  }
+}
+
+$directions: (row, row-reverse, column, column-reverse);
+@each $direction in $directions {
+  .h-direction--#{$direction} {
+    @include flex-direction($direction);
+  }
+}
+
+$x-alignments: (
+  left: flex-start,
+  center: center,
+  right: flex-end,
+);
+$y-alignments: (
+  top: flex-start,
+  center: center,
+  bottom: flex-end,
+  stretch: stretch,
+);
+@each $x-pos, $x-mode in $x-alignments {
+  @each $y-pos, $y-mode in $y-alignments {
+    .h-alignment {
+      &--#{$x-pos}-#{$y-pos} {
+        @include justify-content($y-mode);
+        @include align-items($x-mode);
+        @include breakpoint(medium) {
+          @include justify-content($x-mode);
+          @include align-items($y-mode);
+        }
+      }
+    }
+  }
+}

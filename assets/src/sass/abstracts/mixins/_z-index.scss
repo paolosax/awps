@@ -1,0 +1,31 @@
+/*--------------------------------------------------------------
+# ABSTRACTS/MIXINS/Z-INDEX
+
+Usage:
+
+.element {
+  @include z-index(navigation);
+}
+
+Ref. function: https://jonsuh.com/blog/organizing-z-index-with-sass/
+--------------------------------------------------------------*/
+// # MAP
+$z-index: (
+  modal              : 200,
+  navigation         : 100,
+  footer             : 90,
+  triangle           : 60,
+  navigation-rainbow : 50,
+  share-type         : 41,
+  share              : 40,
+);
+
+// # FUNCTION
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+// # MIXIN
+@mixin z-index($key) {
+  z-index: z-index($key);
+}

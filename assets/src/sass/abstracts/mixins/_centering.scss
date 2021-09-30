@@ -1,0 +1,30 @@
+/*--------------------------------------------------------------
+# MIXINS - CENTERING
+ref.: https://css-tricks.com/snippets/sass/centering-mixin/
+usage: 
+    @include center(true, false); -> horizontal
+    @include center(false, true); -> vertical
+    @include center(); -> both ?
+--------------------------------------------------------------*/
+
+
+@mixin center($horizontal: true, $vertical: true) {
+  position: absolute;
+
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%); 
+    // transform: translate(-50%, -50%);
+
+  } @else if ($horizontal) {
+    left: 50%;
+    @include translate(-50%, 0);
+    // transform: translate(-50%, 0);
+
+  } @else if ($vertical) {
+    top: 50%;
+    // transform: translate(0, -50%);
+    @include translate(0, -50%);
+  }
+}

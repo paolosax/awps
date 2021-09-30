@@ -1,0 +1,32 @@
+/*--------------------------------------------------------------
+# COMPONENTS/WIDGETS
+--------------------------------------------------------------*/
+.widget-about p {
+    max-width: 260px;
+}
+
+.widget {
+    .widget-title {
+        border-bottom: 1px solid get_color(gg-blue);
+        color: get_color(gg-blue);
+        padding-bottom: $global-padding;
+        margin-bottom: $global-margin;
+
+        .gg-footer & {
+            border-bottom: 1px solid rgba($white, .1);
+            color: $white;
+            font-weight: bold;
+        }
+    }
+
+    .widget-list {
+        &.customer-care {
+            @include flexbox();
+            @include flex-wrap(wrap);
+
+            li {
+                @include flex(1, 0, 50%);
+            }
+        }
+    }
+}
